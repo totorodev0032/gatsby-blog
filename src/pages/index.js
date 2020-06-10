@@ -3,20 +3,59 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
-import SEO from "../components/seo"
+import SEO from "../components/seo";
+import {grapql, StaticQuery} from 'gatsby';
+import Post from '../components/Post/Post';
+import LandingPage from '../components/LandingPage/LandingPage';
+import Parent from '../components/Parent/Parent';
+import './index.css';
 
 const IndexPage = () => (
-  <Layout>
+  <>
+  <LandingPage/>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
+    <StaticQuery query = {indexQuery} render = {data => {
+      return (
+        <div className = "wrapper_blogbox">
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            
+              <Post title = {node.frontmatter.title} 
+             author = {node.frontmatter.author}
+             path = {node.frontmatter.path}
+             date = {node.frontmatter.date}
+             body = {node.excerpt}
+             fluid = {node.frontmatter.image.childImageSharp.fluid}
+            />
+          ))}
+        </div>
+      )
+     } } />
+  </>
 )
 
+const indexQuery = graphql`
+query{
+  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}){
+    edges{
+      node{
+        id
+        frontmatter{
+          title
+          date(formatString: "MMM Do YYYY" )
+          author
+          path
+          image{
+            childImageSharp{
+              fluid(maxWidth: 400,){
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        excerpt
+      }
+    }
+  }
+}
+`
 export default IndexPage

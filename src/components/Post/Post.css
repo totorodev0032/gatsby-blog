@@ -1,0 +1,11 @@
+.post_wrapper{
+    display: flex;
+    height: 30vh;
+    width: 400px;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+}
