@@ -10,10 +10,11 @@ const Post = ({title, author, slug, date, body, fluid, tags}) => {
             <Img fluid = {fluid}/>
             <div className = "post_wrapper">
                 
-                <h4 className = "title">
+               <Link to = {slug} className = "link"><p className = "title">
                     {title}
-                </h4>
-                <p className = "date">{date} </p>
+                </p>
+                </Link>
+                {/* <p className = "date">{date} </p>
                 <p className = "author">{author} </p>
                 <p>{body}</p>
                 <p>
@@ -26,8 +27,8 @@ const Post = ({title, author, slug, date, body, fluid, tags}) => {
                             </li>
                         ))
                     }
-                </p>
-             <Link to={slug}>Read more</Link>
+                </p> */}
+             {/* <Link to={slug}>Read more</Link> */}
             </div>
             
            

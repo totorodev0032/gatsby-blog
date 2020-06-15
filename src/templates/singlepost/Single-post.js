@@ -40,7 +40,7 @@ query blogPostBySlug($slug: String!){
             date(formatString: "MMM Do YYYY")
             image{
                 childImageSharp{
-                    fluid(maxWidth: 300){
+                    fluid(maxWidth: 200){
                         ...GatsbyImageSharpFluid
                     }
                 }

@@ -12,7 +12,7 @@ import './index.css';
 
 const IndexPage = () => (
   <>
-  <LandingPage/>
+  {/* <LandingPage/> */}
     <SEO title="Home" />
     <StaticQuery query = {indexQuery} render = {data => {
       return (
@@ -49,7 +49,7 @@ query{
           tags
           image{
             childImageSharp{
-              fluid(maxWidth: 400,){
+              fluid(maxWidth: 300,){
                 ...GatsbyImageSharpFluid
               }
             }
