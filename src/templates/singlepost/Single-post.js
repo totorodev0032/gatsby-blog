@@ -4,12 +4,15 @@ import SEO from '../../components/seo';
 import {slugify} from '../../util/UtilityFunctions'
 import Img from 'gatsby-image';
 import {Link} from 'gatsby';
+import './single-post.css';
 
 const SinglePost = ({data}) =>{
     const post = data.markdownRemark.frontmatter
     return(
         <>
             <SEO title = {post.title}/>
+            <div className = "single_parent">
+                <div className = "postArea">
             <h1>{post.title}</h1>
             <Img fluid = {post.image.childImageSharp.fluid}/>
 
@@ -25,6 +28,8 @@ const SinglePost = ({data}) =>{
                     ))
                 }
             </ul> */}
+            </div>
+            </div>
         </>
     )
 }
@@ -40,7 +45,7 @@ query blogPostBySlug($slug: String!){
             date(formatString: "MMM Do YYYY")
             image{
                 childImageSharp{
-                    fluid(maxWidth: 200){
+                    fluid(maxWidth: 200, maxHeight: 150){
                         ...GatsbyImageSharpFluid
                     }
                 }

@@ -1,0 +1,15 @@
+.single_parent{
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.single_parent .postArea{
+    margin-top: 5%;
+    display: flex;
+    height: auto;
+    width: 50%;
+    flex-direction: column;
+}

@@ -16,6 +16,8 @@ const IndexPage = () => (
     <SEO title="Home" />
     <StaticQuery query = {indexQuery} render = {data => {
       return (
+        <div className = "parentBlog">
+          <div className = "nav"></div>
         <div className = "wrapper_blogbox">
           {data.allMarkdownRemark.edges.map(({ node }) => (
             
@@ -30,6 +32,7 @@ const IndexPage = () => (
              tags = {node.frontmatter.tags}
             />
           ))}
+        </div>
         </div>
       )
      } } />
@@ -49,7 +52,7 @@ query{
           tags
           image{
             childImageSharp{
-              fluid(maxWidth: 300,){
+              fluid(maxWidth: 300, maxHeight: 150){
                 ...GatsbyImageSharpFluid
               }
             }

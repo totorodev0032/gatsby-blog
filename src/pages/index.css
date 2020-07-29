@@ -1,7 +1,20 @@
-.wrapper_blogbox{
+.parentBlog{
+    display: flex;
+    height: auto;
+
+
+}
+
+.parentBlog .nav {
+    display: flex;
+    flex-basis: 20%;
+}
+
+.parentBlog .wrapper_blogbox{
     /* margin-left: 50px; */
     /* margin-top: 50px; */
     display: flex;
+    flex-basis: 80%;
     height: auto;
     width: 100%;
     justify-content: space-around;

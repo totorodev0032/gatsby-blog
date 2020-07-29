@@ -1,8 +1,8 @@
 ---
-title: 'An investor guide to cryptocurrency - 4 things you need to know about Bitcoin'
+title: 'An investor guide to cryptocurrency - 3 things you need to know about Bitcoin'
 date: 2018-12-01 01:00:00
 author: 'Nagendra Kumar'
-image: '../../images/jupyter.png'
+image: '../../images/happy.png'
 tags: 
 - coding
 - web dev

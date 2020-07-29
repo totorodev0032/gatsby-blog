@@ -1,5 +1,5 @@
 ---
-title: 'An investor guide to cryptocurrency - 5 things you need to know about Bitcoin'
+title: '15 JavaScript Tips: best practices to simplify your code'
 date: 2018-12-01 01:00:00
 author: 'Nagendra Kumar'
 image: '../../images/blogsitee.png'
