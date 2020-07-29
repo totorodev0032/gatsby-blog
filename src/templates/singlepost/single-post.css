@@ -13,3 +13,12 @@
     width: 50%;
     flex-direction: column;
 }
+
+@media screen and (max-width: 796px) {
+    .single_parent .postArea {
+        display: flex;
+        height: auto;
+        width: 90%;
+        flex-direction: column;
+    }
+}

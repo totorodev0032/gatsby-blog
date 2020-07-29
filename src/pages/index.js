@@ -9,6 +9,8 @@ import Post from '../components/Post/Post';
 import LandingPage from '../components/LandingPage/LandingPage';
 import Parent from '../components/Parent/Parent';
 import './index.css';
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+deckDeckGoHighlightElement();
 
 const IndexPage = () => (
   <>

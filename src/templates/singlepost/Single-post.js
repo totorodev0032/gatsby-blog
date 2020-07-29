@@ -11,10 +11,12 @@ const SinglePost = ({data}) =>{
     return(
         <>
             <SEO title = {post.title}/>
+            <p>hey i am navbar . dont forget me</p>
             <div className = "single_parent">
                 <div className = "postArea">
             <h1>{post.title}</h1>
             <Img fluid = {post.image.childImageSharp.fluid}/>
+            <br/>
 
             <div dangerouslySetInnerHTML = {{ __html: data.markdownRemark.html}}></div>
             {/* <ul>

@@ -9,3 +9,14 @@ tags:
 ---
 
 welcome to code Blog. I hope you are doing good.
+
+```javascript
+function add(a ,b){
+    return a+b
+}  
+```  
+
+sakfjslkjfslakfjaslkfjlkasfjaskfjkslfjslkafjaslkfjasf casfsafcsalk cfas casklfjc asfcask cf  
+#jjfskfjs
+
+#jflskfasjfl
